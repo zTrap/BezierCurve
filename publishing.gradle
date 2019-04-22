@@ -1,0 +1,102 @@
+apply plugin: 'signing'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = setup.group
+version = setup.version_name
+
+task cleanBuildInstall(type: GradleBuild) {
+    group = "publishing"
+    tasks = ['clean', 'build', 'install']
+}
+
+task cleanBuildPublish(type: GradleBuild) {
+    group = "publishing"
+    tasks = ['cleanBuildInstall', 'bintrayUpload']
+}
+
+task sourcesJar(type: Jar) {
+    getArchiveClassifier().set('sources')
+    from sourceSets.main.kotlin.srcDirs
+    exclude '**/BuildConfig.java'
+}
+
+task javadocJar(type: Jar, dependsOn: dokka) {
+    getArchiveClassifier().set('javadoc')
+    from dokka.outputDirectory
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+signing {
+    required { gradle.taskGraph.hasTask("bintrayUpload") }
+    sign configurations.archives
+}
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                name setup.pom_name
+                packaging setup.pom_packaging
+                description setup.pom_description
+                url setup.pom_url
+
+                scm {
+                    url setup.pom_scm_url
+                    connection setup.pom_scm_connection
+                    developerConnection setup.pom_scm_dev_connection
+                }
+
+                licenses {
+                    license {
+                        name setup.pom_licence_name
+                        url setup.pom_licence_url
+                        distribution setup.pom_licence_dist
+                    }
+                }
+
+                developers {
+                    developer {
+                        id setup.pom_developer_id
+                        name setup.pom_developer_name
+                    }
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintray.user') ? project.property('bintray.user') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintray.apikey') ? project.property('bintray.apikey') : System.getenv('BINTRAY_API_KEY')
+
+    configurations = ['archives']
+
+    publish = true
+
+    pkg {
+        repo = setup.repo
+        name = setup.pom_artifact_id
+        vcsUrl = setup.pom_vcs
+        publicDownloadNumbers = true
+
+        version {
+            name = setup.version_name
+
+            gpg {
+                sign = true
+            }
+
+            mavenCentralSync {
+                sync = true
+                user = hasProperty('NEXUS_USERNAME') ? sonatype_username : System.getenv('NEXUS_USERNAME')
+                password = hasProperty('NEXUS_PASSWORD') ? sonatype_password : System.getenv('NEXUS_PASSWORD')
+                close = '1'
+            }
+        }
+    }
+}

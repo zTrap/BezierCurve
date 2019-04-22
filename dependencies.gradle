@@ -1,0 +1,33 @@
+ext {
+    setup = [
+            JavaVers              : JavaVersion.VERSION_1_8,
+            version_name          : "1.0.0",
+            version_code          : 1_001_000_000,
+
+            group                 : "ru.ztrap",
+            repo                  : "maven",
+
+            pom_name              : "Bezier curves creator",
+            pom_artifact_id       : "beziercurve",
+            pom_packaging         : "aar",
+            pom_description       : "The simple helper for build Bezier curves",
+
+            pom_vcs               : "https://github.com/zTrap/BezierCurve.git",
+            pom_url               : "https://github.com/zTrap/BezierCurve",
+
+            pom_scm_url           : "https://github.com/zTrap/BezierCurve",
+            pom_scm_connection    : "scm:git@github.com:zTrap/BezierCurve.git",
+            pom_scm_dev_connection: "scm:git@github.com:zTrap/BezierCurve.git",
+
+            pom_licence_name      : "The Apache Software License, Version 2.0",
+            pom_licence_url       : "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            pom_licence_dist      : "repo",
+
+            pom_developer_id      : "ztrap",
+            pom_developer_name    : "Peter Gulko"
+    ]
+
+    versions = [
+            appcompat : "1.0.2"
+    ]
+}
