@@ -1,12 +1,12 @@
 # Bezier curves creator
-The simple helper for build [Bezier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
+The simple helper for build [Bezier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). Fully compatible with projects written in java/kotlin
 
 [ ![Download](https://api.bintray.com/packages/ztrap/maven/beziercurve/images/download.svg) ](https://bintray.com/ztrap/maven/beziercurve/_latestVersion)
 
 ## Install
 
 ```gradle
-implementation 'ru.ztrap:beziercurve:1.0.0'
+implementation 'ru.ztrap:beziercurve:1.0.1'
 ```
 
 ## Usage

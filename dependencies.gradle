@@ -1,16 +1,16 @@
 ext {
     setup = [
             JavaVers              : JavaVersion.VERSION_1_8,
-            version_name          : "1.0.0",
-            version_code          : 1_001_000_000,
+            version_name          : "1.0.1",
+            version_code          : 1_001_000_001,
 
             group                 : "ru.ztrap",
             repo                  : "maven",
 
             pom_name              : "Bezier curves creator",
             pom_artifact_id       : "beziercurve",
-            pom_packaging         : "aar",
-            pom_description       : "The simple helper for build Bezier curves",
+            pom_packaging         : "jar",
+            pom_description       : "The simple helper for build Bezier curves. Fully compatible with projects written in java/kotlin",
 
             pom_vcs               : "https://github.com/zTrap/BezierCurve.git",
             pom_url               : "https://github.com/zTrap/BezierCurve",
