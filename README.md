@@ -30,7 +30,7 @@ val curve = BezierCurve(
 curve.linearFor(progress)
 ```
 
-3. Use calculation values are collected in `point` variable
+3. Use calculated values wich are collected in `point` variable
 
 ```kotlin
 val point = curve.linearFor(progress)
