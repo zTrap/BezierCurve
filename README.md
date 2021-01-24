@@ -14,7 +14,7 @@ implementation 'ru.ztrap:beziercurve:1.0.1'
 1. Create some Bezier curve instance
 
 ```kotlin
-// just a helpers. You steel can provide a direct values in BezierCurve constructor
+// just a helpers. You still can provide a direct values in BezierCurve constructor
 val startScene = BezierScene(3f, 7f, 21f, 17f)
 val endScene = BezierScene(6f, 6f, 18f, 18f)
 
@@ -47,7 +47,7 @@ val point = curve.point
 
 ## License
 
-       Copyright 2019 zTrap
+       Copyright 2021 zTrap
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
