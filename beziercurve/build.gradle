@@ -1,23 +1,14 @@
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'kotlin'
 
-dokka {
-    outputFormat = 'javadoc'
-    outputDirectory = "$buildDir/javadoc"
-    sourceDirs = files('src/main/java')
-    packageOptions {
-        prefix = 'beziercurve'
-    }
-}
-
 apply from: '../publishing.gradle'
 
 compileKotlin {
     kotlinOptions {
-        jvmTarget = setup.JavaVers
+        jvmTarget = setup.jvm
     }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin"
 }

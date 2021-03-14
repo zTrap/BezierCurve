@@ -1,33 +1,43 @@
 ext {
+    baseArtifactName = "beziercurve"
+    baseRepoBucket = "zTrap/$baseArtifactName"
+    baseRepoUrl = "https://github.com/$baseRepoBucket"
+
     setup = [
-            JavaVers              : JavaVersion.VERSION_1_8,
-            version_name          : "1.0.1",
-            version_code          : 1_001_000_001,
-
-            group                 : "ru.ztrap",
-            repo                  : "maven",
-
-            pom_name              : "Bezier curves creator",
-            pom_artifact_id       : "beziercurve",
-            pom_packaging         : "jar",
-            pom_description       : "The simple helper for build Bezier curves. Fully compatible with projects written in java/kotlin",
-
-            pom_vcs               : "https://github.com/zTrap/BezierCurve.git",
-            pom_url               : "https://github.com/zTrap/BezierCurve",
-
-            pom_scm_url           : "https://github.com/zTrap/BezierCurve",
-            pom_scm_connection    : "scm:git@github.com:zTrap/BezierCurve.git",
-            pom_scm_dev_connection: "scm:git@github.com:zTrap/BezierCurve.git",
-
-            pom_licence_name      : "The Apache Software License, Version 2.0",
-            pom_licence_url       : "http://www.apache.org/licenses/LICENSE-2.0.txt",
-            pom_licence_dist      : "repo",
-
-            pom_developer_id      : "ztrap",
-            pom_developer_name    : "Peter Gulko"
+            jvm: JavaVersion.VERSION_1_8
     ]
-
     versions = [
-            appcompat : "1.0.2"
+            kotlin       : "1.4.31",
+            dokka        : "0.10.1",
+            nexus_staging: "0.30.0",
+    ]
+    pom_info = [
+            group    : "ru.ztrap",
+            packaging: "jar",
+            repo     : [
+                    type: "maven",
+                    vcs : "${baseRepoUrl}.git",
+                    url : baseRepoUrl,
+            ],
+            scm      : [
+                    url           : baseRepoUrl,
+                    connection    : "scm:git@github.com:${baseRepoBucket}.git",
+                    dev_connection: "scm:git@github.com:${baseRepoBucket}.git"
+            ],
+            license  : [
+                    name: "the apache software license, version 2.0",
+                    url : "http://www.apache.org/licenses/license-2.0.txt",
+                    dist: "repo",
+            ],
+            developer: [
+                    id  : "ztrap",
+                    name: "peter gulko"
+            ],
+            artifact : [
+                    id         : baseArtifactName,
+                    name       : "Bezier curves creator",
+                    description: "The simple helper for build Bezier curves. Fully compatible with projects written in java/kotlin",
+                    version    : "1.0.2",
+            ]
     ]
 }
