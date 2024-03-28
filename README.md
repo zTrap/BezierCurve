@@ -1,12 +1,12 @@
 # Bezier curves creator
-The simple helper for build [Bezier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). Fully compatible with projects written in java/kotlin
+The simple multiplatform helper for build [Bezier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
 
 [ ![Download](https://maven-badges.herokuapp.com/maven-central/ru.ztrap/beziercurve/badge.svg) ](https://maven-badges.herokuapp.com/maven-central/ru.ztrap/beziercurve/)
 
 ## Install
 
 ```gradle
-implementation 'ru.ztrap:beziercurve:1.0.2'
+implementation 'ru.ztrap:beziercurve:1.0.3'
 ```
 
 ## Usage
@@ -28,20 +28,16 @@ val curve = BezierCurve(
 
 ```kotlin
 val point = curve.calculate(progress)
-// or
-curve.calculate(progress)
-val point = curve.point
 ```
 
 ## Developed By
 
  - Peter Gulko
  - ztrap.developer@gmail.com
- - [paypal.me/zTrap](https://www.paypal.me/zTrap)
 
 ## License
 
-       Copyright 2021 zTrap
+       Copyright 2024 zTrap
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.

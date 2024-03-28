@@ -1,9 +1,6 @@
-package ru.ztrap.beziercurve
+package ru.ztrap.bezier.curve
 
-/**
- * @author pa.gulko zTrap (17.04.2019)
- */
-data class BezierScene(
+public data class BezierScene(
     val left: Float,
     val top: Float,
     val right: Float,
