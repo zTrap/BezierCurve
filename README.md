@@ -6,7 +6,7 @@ The simple multiplatform helper for build [Bezier curves](https://en.wikipedia.o
 ## Install
 
 ```gradle
-implementation 'ru.ztrap:beziercurve:1.0.3'
+implementation 'ru.ztrap:beziercurve:1.0.4'
 ```
 
 ## Usage
@@ -19,8 +19,8 @@ val startScene = BezierScene(3f, 7f, 21f, 17f)
 val endScene = BezierScene(6f, 6f, 18f, 18f)
 
 val curve = BezierCurve(
-    startScene.left to startScene.centerY,
-    endScene.centerX to endScene.centerY
+    start = startScene.left to startScene.centerY,
+    end = endScene.centerX to endScene.centerY,
 )
 ```
 

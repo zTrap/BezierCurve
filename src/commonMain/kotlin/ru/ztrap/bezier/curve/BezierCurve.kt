@@ -7,7 +7,7 @@ private val APPLICABLE_VALUES = 0f..1f
 public data class BezierCurve(
     val start: Point,
     val end: Point,
-    val controls: List<Point>,
+    val controls: List<Point> = emptyList(),
 ) {
 
     /**
@@ -18,7 +18,7 @@ public data class BezierCurve(
     public constructor(
         start: Pair<Float, Float>,
         end: Pair<Float, Float>,
-        controls: List<Pair<Float, Float>>,
+        controls: List<Pair<Float, Float>> = emptyList(),
     ) : this(
         start = Point(start.x, start.y),
         end = Point(end.x, end.y),

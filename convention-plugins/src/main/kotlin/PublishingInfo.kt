@@ -16,14 +16,14 @@ object PublishingInfo {
     }
 
     object License {
-        const val NAME = "the apache software license, version 2.0"
-        const val URL = "http://www.apache.org/licenses/license-2.0.txt"
+        const val NAME = "Apache-2.0 license"
+        const val URL = "https://www.apache.org/licenses/LICENSE-2.0"
         const val DIST = "repo"
     }
 
     object Developer {
-        const val ID = "ztrap"
-        const val NAME = "peter gulko"
+        const val ID = "zTrap"
+        const val NAME = "Peter Gulko"
         const val EMAIL = "ztrap.developer@gmail.com"
     }
 
@@ -31,6 +31,6 @@ object PublishingInfo {
         const val ID = BASE_ARTIFACT_NAME
         const val NAME = "Bezier curves creator"
         const val DESCRIPTION = "The simple multiplatform helper for build Bezier curves"
-        const val VERSION = "1.0.3"
+        const val VERSION = "1.0.4"
     }
 }
