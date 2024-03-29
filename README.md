@@ -1,7 +1,9 @@
 # Bezier curves creator
 The simple multiplatform helper for build [Bezier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
 
-[ ![Download](https://maven-badges.herokuapp.com/maven-central/ru.ztrap/beziercurve/badge.svg) ](https://maven-badges.herokuapp.com/maven-central/ru.ztrap/beziercurve/)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Download](https://img.shields.io/maven-central/v/ru.ztrap/beziercurve?style=flat)](https://central.sonatype.com/artifact/ru.ztrap/beziercurve)
+[![Kotlin](https://img.shields.io/badge/kotlin-1.9.23-blue.svg?logo=kotlin)](http://kotlinlang.org)
 
 ## Install
 
