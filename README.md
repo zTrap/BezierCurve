@@ -8,7 +8,7 @@ The simple multiplatform helper for build [Bezier curves](https://en.wikipedia.o
 ## Install
 
 ```gradle
-implementation 'ru.ztrap:beziercurve:1.0.4'
+implementation 'ru.ztrap:beziercurve:${latestVersion}'
 ```
 
 ## Usage

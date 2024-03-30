@@ -20,10 +20,10 @@ kotlin {
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = PublishingInfo.Artifact.NAME
+        moduleName = PublishingInfo.Artifact.ID
         browser {
             commonWebpackConfig {
-                outputFileName = "${PublishingInfo.Artifact.NAME}.js"
+                outputFileName = "${PublishingInfo.Artifact.ID}.js"
                 devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
                     static = (static ?: mutableListOf()).apply {
                         // Serve sources to debug inside browser

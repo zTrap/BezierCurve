@@ -31,6 +31,6 @@ object PublishingInfo {
         const val ID = BASE_ARTIFACT_NAME
         const val NAME = "Bezier curves creator"
         const val DESCRIPTION = "The simple multiplatform helper for build Bezier curves"
-        const val VERSION = "1.0.4"
+        const val VERSION = "1.0.5"
     }
 }
